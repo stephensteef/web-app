@@ -1,0 +1,133 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap" rel="stylesheet">
+
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">App Name</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./people_page.html">People</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./email_page.html">Email</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./canvas_page.html">Canvas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./lecture_login_page.html">Lecture</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+    </ul>
+  </div>
+</nav>
+
+<div class="container mx-auto mt-3 mb-3 row">
+  <div class="col">
+    <h4>This Week</h4>
+  </div>
+  <div class="col">
+    <h4>Previous Week</h4>
+  </div>
+  <div class="col">
+    <h4>Next Week</h4>
+  </div>
+</div>
+
+<hr>
+
+<div class="div" style="margin: 5em;">
+
+</div>
+
+
+<div class="container">
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Student Id</th>
+        <th scope="col">Class Average</th>
+        <th scope="col">Lab Average</th>
+        <th scope="col">Assesment Average</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>70</td>
+        <td>79</td>
+        <td>65</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="container">
+  <div id='engagement_indicator'>
+    <!-- Plotly chart will be drawn inside this DIV -->
+  </div>
+</div>
+
+
+<script>
+  var data = [{
+  type: 'bar',
+  x: [70, 79, 65],
+  y: ['Class Average', 'Lab Average', 'Assesment Average'],
+  orientation: 'h'
+}];
+
+var layout = {
+    margin: {
+    l: 100,
+    r: 20,
+    t: 200,
+    b: 70
+  },
+  width: 1000,
+  height: 600,
+}
+Plotly.newPlot('engagement_indicator', data , layout);
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
